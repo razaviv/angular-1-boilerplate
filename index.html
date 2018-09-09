@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taxi4you-console" ng-controller="main">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Taxi4you Console Manager - TCM">
+    <meta name="author" content="Taxi4you LTD">
+    <title>Taxi4you Console</title>
+
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!--google font-->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!--common style-->
+    <link href="assets/vendor/bootstrap/css/bootstrap.rtl.css" ng-if="locale=='he-IL'" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.css" ng-if="locale!='he-IL'" rel="stylesheet">
+    <link href="assets/vendor/lobicard/css/lobicard.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="assets/vendor/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet">
+
+    <!--custom css-->
+    <link href="assets/css/main.rtl.css" ng-if="locale=='he-IL'" rel="stylesheet">
+    <link href="assets/css/main.css" ng-if="locale!='he-IL'" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/html5shiv.js"></script>
+    <script src="assets/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body class="app header-fixed left-sidebar-fixed right-sidebar-fixed right-sidebar-overlay right-sidebar-hidden">
+
+    <div ng-view></div>
+
+    <!-- assets scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-sanitize.js" charset="utf-8"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.rtl.js" ng-if="locale=='he-IL'"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js" ng-if="locale!='he-IL'"></script>
+    <script src="assets/vendor/jquery-ui-touch/jquery.ui.touch-punch-improved.js"></script>
+    <script class="include" type="text/javascript" src="assets/vendor/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/vendor/lobicard/js/lobicard.js"></script>
+    <script src="assets/vendor/jquery.scrollTo.min.js"></script>
+    <script src="assets/vendor/date-picker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/scripts.rtl.js" ng-if="locale=='he-IL'"></script>
+    <script src="assets/js/scripts.js" ng-if="locale!='he-IL'"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/modernizr.js"></script>
+    <![endif]-->
+
+    <!-- app scripts -->
+    <script src="app/config.js" charset="utf-8"></script>
+    <script src="app/app.js" charset="utf-8"></script>
+    <script src="app/main.js" charset="utf-8"></script>
+
+    <!-- app services -->
+    <script src="app/services/date-service.js" charset="utf-8"></script>
+    <script src="app/services/local-storage-service.js" charset="utf-8"></script>
+    <script src="app/services/authentication-service.js" charset="utf-8"></script>
+    <script src="app/services/parse-service.js" charset="utf-8"></script>
+    <script src="app/services/translation-service.js" charset="utf-8"></script>
+
+    <!-- screens scripts -->
+    <script src="screens/dashboard/dashboard.js" charset="utf-8"></script>
+    <script src="screens/dashboard/components/list-stations/list-stations.js" charset="utf-8"></script>
+    <script src="screens/dashboard/components/tabs/tabs.js" charset="utf-8"></script>
+    <script src="screens/dashboard/components/order-form/order-form.js" charset="utf-8"></script>
+
+    <script src="screens/forgot-password/forgot-password.js" charset="utf-8"></script>
+    <script src="screens/forgot-password/components/request-sms/request-sms.js" charset="utf-8"></script>
+    <script src="screens/forgot-password/components/request-sms/request-sms-service.js" charset="utf-8"></script>
+    <script src="screens/forgot-password/components/reset-password/reset-password.js" charset="utf-8"></script>
+    <script src="screens/forgot-password/components/reset-password/reset-password-service.js" charset="utf-8"></script>
+
+    <script src="screens/register/register.js" charset="utf-8"></script>
+    <script src="screens/register/components/register-form/register-form.js" charset="utf-8"></script>
+
+    <script src="screens/login/login.js" charset="utf-8"></script>
+    <script src="screens/login/components/request-login/request-login.js" charset="utf-8"></script>
+    <script src="screens/login/components/request-login/request-login-service.js" charset="utf-8"></script>
+
+    <!-- shared scripts -->
+    <script src="shared/datepicker/datepicker.js" charset="utf-8"></script>
+    <script src="shared/loader/loader.js" charset="utf-8"></script>
+
+    <!-- structure scripts -->
+    <script src="structure/header/header.js" charset="utf-8"></script>
+    <script src="structure/footer/footer.js" charset="utf-8"></script>
+    <script src="structure/sidebar/sidebar.js" charset="utf-8"></script>
+    <script src="structure/page-title/page-title.js" charset="utf-8"></script>
+    <script src="structure/aside/aside.js" charset="utf-8"></script>
+
+    <!-- analytical scripts -->
+
+    <!-- sockets -->
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      var socket = io('http://localhost:3000', {transports: ['websocket']});
+      socket.on("disconnect", function() {
+        console.log("Disconnected");
+      });
+      socket.on("reconnect", function() {
+        console.log("Reconnecting");
+      });
+      socket.on("connect", function() {
+        console.log("Connected");
+      });
+      socket.on("example", info => {
+        console.log(info);
+      });
+    </script>
+
+  </body>
+
+</html>

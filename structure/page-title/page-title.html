@@ -1,0 +1,49 @@
+<!--page title start-->
+<div class="page-title">
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col-8">
+        <h4 class="mb-0">
+          <span ng-class="{'float-right pl-2': main.locale=='he-IL', 'float-left pr-2': main.locale!='he-IL'}">
+            {{title}}
+          </span>
+           <small ng-show="caption">
+             {{caption}}
+           </small>
+        </h4>
+        <ol ng-show="breadcrumbs.length>0" class="breadcrumb mb-0 pl-0 pt-1 pb-0">
+          <li class="breadcrumb-item"><a data-target="#" class="default-color">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </div>
+      <!-- <div class="col-4">
+        <div class="btn-group float-left mr-2">
+          <button class="btn btn-primary btn-sm dropdown-toggle mt-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Settings
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-target="#">Profile Settings</a>
+            <a class="dropdown-item" data-target="#">Data Settings</a>
+            <a class="dropdown-item" data-target="#">Notification Setting</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" data-target="#">Advanced Settings</a>
+          </div>
+        </div>
+
+        <div class="btn-group float-left">
+          <button class="btn btn-danger btn-sm dropdown-toggle mt-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Quick Action
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-target="#">Action</a>
+            <a class="dropdown-item" data-target="#">Another action</a>
+            <a class="dropdown-item" data-target="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" data-target="#">Separated link</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!--page title end-->

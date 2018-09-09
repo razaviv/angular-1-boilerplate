@@ -1,0 +1,37 @@
+<div class="card card-shadow mb-4">
+  <div class="card-header">
+    <div class="card-title">
+      {{t['Stations overview']}}
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="border-0 "># {{t['code']}}</th>
+            <th class="border-0">{{t['Station']}}</th>
+            <th class="border-0">{{t['Manager']}}</th>
+            <th class="border-0">{{t['Drivers']}}</th>
+            <th class="border-0">{{t['Vehicles']}}</th>
+            <th class="border-0">{{t['Status']}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="x in station track by $index">
+            <td>{{x.code}}</td>
+            <td>{{x.station}}</td>
+            <td>{{x.manager.first_name}} {{x.manager.last_name}}</td>
+            <td>{{x.drivers_amount}}</td>
+            <td>{{x.vehicles_amount}}</td>
+            <td>
+              <span class="badge badge-pill" ng-class="{'badge-warning': x.status=='pending', 'badge-success': x.status=='active', 'badge-danger': x.status=='disabled'}">
+                {{t[x.status]}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

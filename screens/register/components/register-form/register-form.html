@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-lg-12">
+    <form class="form-signin">
+      <a href="index.html" class="brand text-center">
+        <img src="assets/img/logo-dark.png" srcset="assets/img/logo-dark@2x.png 2x" alt=""/>
+      </a>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="firstName">{{t['First name']}}</label>
+            <input type="text" id="firstName" class="form-control" minlength="2" maxlength="10" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="lastName">{{t['Last name']}}</label>
+            <input type="text" id="lastName" class="form-control" minlength="2" maxlength="10" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="email">{{t['Email address']}}</label>
+            <div class="input-group">
+              <input type="email" id="email" class="form-control" minlength="5" maxlength="45" dir="ltr">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-envelope-o"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="phone">{{t['Phone']}}</label>
+            <div class="input-group">
+              <input type="phone" id="phone" class="form-control" minlength="10" maxlength="10" dir="ltr">
+              <div class="input-group-append">
+                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="checkbox mb-4 mt-4">
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="termsAccept">
+          <label class="form-check-label" for="termsAccept">
+            {{t['I agree to']}}
+            <span class="text-primary pointer">{{t['The terms and conditions']}}</span>
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">{{t['Sign up']}}</button>
+      <div class="mt-4">
+        <span>
+          {{t['Already have an account']}}?
+        </span>
+        <a href="#!login" class="text-primary">{{t['Sign In']}}</a>
+      </div>
+    </form>
+
+  </div>
+</div>

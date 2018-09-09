@@ -1,0 +1,21 @@
+<screen ng-controller="dashboard">
+  <wrapper ng-if="initialized">
+    <header-component></header-component>
+    <div class="app-body">
+      <sidebar-component></sidebar-component>
+      <main class="main-content">
+        <page-title-component title="{{t['Dashboard']}}" caption="{{t['Ready to read your system like an open book']}}?"></page-title-component>
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+              <list-stations-component></list-stations-component>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <aside-component></aside-component>
+    </div>
+  </wrapper>
+</screen>

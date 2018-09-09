@@ -1,0 +1,21 @@
+<!--left sidebar start-->
+<div class="left-sidebar">
+  <nav class="sidebar-menu">
+    <ul id="nav-accordion">
+
+      <li ng-repeat="x in menu track by $index" ng-class="{'sub-menu': x.subs.length>0}">
+        <a href="#!{{x.path}}" ng-class="{'active': x.active}">
+          <i class="{{x.icon}}"></i>
+          <span>{{x.name}}</span>
+        </a>
+        <ul class="sub" ng-if="x.subs.length>0">
+          <li ng-repeat="sub in x.subs">
+            <a href="#!{{sub.path}}">{{sub.name}}</a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+</div>
+<!--left sidebar end-->

@@ -1,0 +1,5 @@
+if (process.env.NODE_ENV=="staging") {
+  process.env.API_PATH = "...";
+} if (process.env.NODE_ENV=="production") {
+  process.env.API_PATH = "---";
+}

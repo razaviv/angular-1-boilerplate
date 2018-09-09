@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-lg-6">
+    <label for="" ng-show="errors['startDate'].length>0">
+      {{errors['startDate']}}
+    </label>
+    <datepicker-component selector="startDate"></datepicker-component>
+  </div>
+  <div class="col-lg-6">
+    <label for="" ng-show="errors['endDate'].length>0">
+      {{errors['endDate']}}
+    </label>
+    <datepicker-component selector="endDate" placeholder="Choose end date"></datepicker-component>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card mt-3 mb-4">
+    <div class="card-body">
+      <h4 class="card-title">Special title treatment</h4>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a class="btn btn-primary text-white" ng-click="send()">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+<div class="row" ng-show="successfullySent">
+  <div class="col-lg-12">
+    <h3>Selected: {{order.startDate}} {{order.endDate}}</h3>
+  </div>
+</div>
